@@ -5,6 +5,8 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareKernel", "ShareKernel\ShareKernel.csproj", "{75841D15-EE22-46FE-8F9F-BF7B02DA3A99}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaReserva.Domain", "VentaReserva.Domain\VentaReserva.Domain.csproj", "{EE9E589C-BA60-4A54-8B11-07DEE7CF354A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{75841D15-EE22-46FE-8F9F-BF7B02DA3A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{75841D15-EE22-46FE-8F9F-BF7B02DA3A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{75841D15-EE22-46FE-8F9F-BF7B02DA3A99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE9E589C-BA60-4A54-8B11-07DEE7CF354A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE9E589C-BA60-4A54-8B11-07DEE7CF354A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE9E589C-BA60-4A54-8B11-07DEE7CF354A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE9E589C-BA60-4A54-8B11-07DEE7CF354A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
