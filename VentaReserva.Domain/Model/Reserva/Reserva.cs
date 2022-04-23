@@ -10,7 +10,7 @@ using VentaReserva.Domain.ValueObjets;
 
 namespace VentaReserva.Domain.Model.Reserva
 {
-    internal class Reserva : AggregateRoot<Guid>
+    public class Reserva : AggregateRoot<Guid>
     {
         public DateTime FechaHora { get; private set; }
         public int EstadoReserva { get; private set; }

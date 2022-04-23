@@ -9,7 +9,7 @@ using VentaReserva.Domain.ValueObjets;
 
 namespace VentaReserva.Domain.Model.Pago
 {
-    internal class Pago: AggregateRoot<Guid>
+    public class Pago: AggregateRoot<Guid>
     {
         public DateTime Fecha { get; private set; }
         public Guid IdReserva { get; private set; }
