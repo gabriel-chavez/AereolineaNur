@@ -9,12 +9,9 @@ namespace VentaReserva.Application.UseCases.Command.Reserva.CrearReserva
 {
     public class CrearReservaCommand : IRequest<Guid>
     {
-    
-
         public Guid IdPasajero { get; set; }
         public Guid IdVuelo { get; set; }
         public decimal Costo { get; set; }
-
         public int NroAsientoFila { get; set; }
         public char  NroAsientoColumna { get; set; }
         public int TipoReserva { get; set; }

@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Threading.Tasks;
 using VentaReserva.Application.Dto.Reserva;
+using VentaReserva.Application.UseCases.Command.Reserva.AnularReserva;
 using VentaReserva.Application.UseCases.Command.Reserva.CrearReserva;
 using VentaReserva.Application.UseCases.Queries.Reserva.GetReservaById;
 
@@ -26,7 +27,17 @@ namespace Reserva.WebApi.Controllers
             Guid id = await _mediator.Send(command);
             return Ok(id);
         }
-        [Route("{id:guid}")]
+        [Route("anular/{Id}")]
+        [HttpPost]
+        public async Task<IActionResult> Anular([FromRoute] AnularReservaCommand command)
+        {
+            Guid id = await _mediator.Send(command);
+            return Ok(id);
+        }
+
+
+
+        [Route("{Id}")]
         [HttpGet]
         public async Task<IActionResult> GetReservaById([FromRoute] GetReservaByIdQuery command)
         {
@@ -37,5 +48,8 @@ namespace Reserva.WebApi.Controllers
 
             return Ok(result);
         }
+
+
+       
     }
 }

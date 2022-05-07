@@ -17,10 +17,11 @@ namespace Reserva.Infraestructure.EF.Repositoty
                 return Task.CompletedTask;
         }
 
-        public Task<VentaReserva.Domain.Model.Reserva.Reserva> FindByIdAsync(Guid id)
+        public async Task<VentaReserva.Domain.Model.Reserva.Reserva> FindByIdAsync(Guid id)
         {
             Console.WriteLine($"retornando la reserva { id }");
-                return null;
+            VentaReserva.Domain.Model.Reserva.Reserva reserva = new VentaReserva.Domain.Model.Reserva.Reserva(Guid.NewGuid(),1,'A',1,100,Guid.NewGuid());
+                return reserva;
         }
 
         public Task UpdateAsync(VentaReserva.Domain.Model.Reserva.Reserva obj)

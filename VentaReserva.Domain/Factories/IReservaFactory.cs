@@ -12,5 +12,6 @@ namespace VentaReserva.Domain.Factories
     public interface IReservaFactory
     {
         Reserva Create(Guid idPasajero, NroAsientoFilaValue nroAsientoFila, NroAsientoColumnaValue nroAsientoColumna, int tipoReserva, PrecioValue costo, Guid idVuelo);
+        Guid Anular(Guid idPasajero);
     }
 }

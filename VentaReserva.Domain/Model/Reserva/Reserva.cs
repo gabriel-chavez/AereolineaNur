@@ -25,7 +25,7 @@ namespace VentaReserva.Domain.Model.Reserva
         {
 
         }
-        internal Reserva(Guid idPasajero, NroAsientoFilaValue nroAsientoFila, NroAsientoColumnaValue nroAsientoColumna, int tipoReserva, PrecioValue costo, Guid idVuelo)
+        public Reserva(Guid idPasajero, NroAsientoFilaValue nroAsientoFila, NroAsientoColumnaValue nroAsientoColumna, int tipoReserva, PrecioValue costo, Guid idVuelo)
         {
             Id= Guid.NewGuid();
             EstadoReserva = 1;

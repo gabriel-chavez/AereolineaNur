@@ -42,6 +42,7 @@ namespace VentaReserva.Application.UseCases.Queries.Reserva.GetReservaById
                     IdVuelo = objReserva.IdVuelo
 
                 };
+                result = new ReservaDto(){Id = request.Id,FechaHora = DateTime.Now,EstadoReserva = 2,IdPasajero = request.Id,Fila = 1,Columna = 'A',TipoReserva = 1,Costo = 100,IdVuelo = request.Id};
 
             }
             catch (Exception)

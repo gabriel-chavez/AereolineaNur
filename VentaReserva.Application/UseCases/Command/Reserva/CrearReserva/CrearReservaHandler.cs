@@ -35,7 +35,7 @@ namespace VentaReserva.Application.UseCases.Command.Reserva.CrearReserva
             try
             {
 
-             //   string nroReserva = await _reservaService.GenerarNroReservaAsync();
+
                 VentaReserva.Domain.Model.Reserva.Reserva objReserva = _reservaFactory.Create(request.IdPasajero,request.NroAsientoFila,request.NroAsientoColumna,request.TipoReserva,request.Costo,request.IdVuelo);
                 objReserva.FinalizarReserva();
                 await _reservaRepository.CreateAsync(objReserva);
@@ -48,7 +48,7 @@ namespace VentaReserva.Application.UseCases.Command.Reserva.CrearReserva
             catch (Exception ex)
             {
 
-                _logger.LogError(ex, "Error al crear pedido");
+                _logger.LogError(ex, "Error al crear reserva");
             }
             return Guid.Empty;
         }
