@@ -8,6 +8,7 @@ namespace VentaReserva.Application.Dto.Reserva
 {
     public class ReservaDto
     {
+        public Guid Id { get; set; }
         public DateTime FechaHora { get;  set; }
         public int EstadoReserva { get;  set; }
         public Guid IdPasajero { get;  set; }
@@ -15,6 +16,6 @@ namespace VentaReserva.Application.Dto.Reserva
         public char Columna { get; set; }
         public int TipoReserva { get;  set; }
         public decimal Costo { get;  set; }
-        public string CodigoVuelo { get;  set; }
+        public Guid IdVuelo { get;  set; }
     }
 }

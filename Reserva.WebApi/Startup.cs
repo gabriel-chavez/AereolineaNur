@@ -30,7 +30,7 @@ namespace Reserva.WebApi
         {
 
 
-            services.AddAplication();
+            
             services.AddInfraestructure();
 
             services.AddControllers();
