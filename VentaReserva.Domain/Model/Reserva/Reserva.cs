@@ -13,26 +13,34 @@ namespace VentaReserva.Domain.Model.Reserva
     public class Reserva : AggregateRoot<Guid>
     {
         public DateTime FechaHora { get; private set; }
+        public DateTime? FechaHoraAnulacion { get; private set; }
         public int EstadoReserva { get; private set; }
         public Guid IdPasajero { get; private set; }
-        public NroAsientoValue NroAsiento { get; private set; }
+        public NroAsientoFilaValue NroAsientoFila { get; private set; }
+        public NroAsientoColumnaValue NroAsientoColumna { get; private set; }
         public int TipoReserva { get; private set; }
         public PrecioValue Costo { get; private set; }
-        public string CodigoVuelo { get; private set; }
-        public Reserva(Guid idPasajero, NroAsientoValue nroAsiento, int tipoReserva, PrecioValue costo, string codigoVuelo)
+        public Guid IdVuelo { get; private set; }
+        private Reserva()
+        {
+
+        }
+        internal Reserva(Guid idPasajero, NroAsientoFilaValue nroAsientoFila, NroAsientoColumnaValue nroAsientoColumna, int tipoReserva, PrecioValue costo, Guid idVuelo)
         {
             Id= Guid.NewGuid();
             EstadoReserva = 1;
+            FechaHoraAnulacion = null;
             FechaHora = DateTime.Now;
             IdPasajero = idPasajero;
-            NroAsiento = nroAsiento;
+            NroAsientoFila = nroAsientoFila;
+            NroAsientoColumna = nroAsientoColumna;
             TipoReserva = tipoReserva;
             Costo = costo;
-            CodigoVuelo = codigoVuelo;
+            IdVuelo = idVuelo;
         }
         public void FinalizarReserva()
         {
-            var evento = new ReservaCreada(Id, CodigoVuelo);
+            var evento = new ReservaCreada(Id, IdVuelo);
             AddDomainEvent(evento);
         }
 

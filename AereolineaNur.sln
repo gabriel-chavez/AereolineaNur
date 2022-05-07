@@ -1,13 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30804.86
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShareKernel", "ShareKernel\ShareKernel.csproj", "{75841D15-EE22-46FE-8F9F-BF7B02DA3A99}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VentaReserva.Domain", "VentaReserva.Domain\VentaReserva.Domain.csproj", "{EE9E589C-BA60-4A54-8B11-07DEE7CF354A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaReserva.Application", "VentaReserva.Application\VentaReserva.Application.csproj", "{112639D0-7218-4B68-BDA9-CA246A8175FE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VentaReserva.Application", "VentaReserva.Application\VentaReserva.Application.csproj", "{112639D0-7218-4B68-BDA9-CA246A8175FE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VentaReserva.Consola", "VentaReserva.Consola\VentaReserva.Consola.csproj", "{AB9DCDEB-4763-4FA4-AAA5-1B70EDA4CCA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reserva.Infraestructure", "Reserva.Infraestructure\Reserva.Infraestructure.csproj", "{C92A51D0-5345-4572-AB48-C9824CC9C220}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Reserva.WebApi", "Reserva.WebApi\Reserva.WebApi.csproj", "{27B5B633-C0BB-44C6-818D-B7F84457C6CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +33,18 @@ Global
 		{112639D0-7218-4B68-BDA9-CA246A8175FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{112639D0-7218-4B68-BDA9-CA246A8175FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{112639D0-7218-4B68-BDA9-CA246A8175FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB9DCDEB-4763-4FA4-AAA5-1B70EDA4CCA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB9DCDEB-4763-4FA4-AAA5-1B70EDA4CCA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB9DCDEB-4763-4FA4-AAA5-1B70EDA4CCA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB9DCDEB-4763-4FA4-AAA5-1B70EDA4CCA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C92A51D0-5345-4572-AB48-C9824CC9C220}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C92A51D0-5345-4572-AB48-C9824CC9C220}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C92A51D0-5345-4572-AB48-C9824CC9C220}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C92A51D0-5345-4572-AB48-C9824CC9C220}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27B5B633-C0BB-44C6-818D-B7F84457C6CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27B5B633-C0BB-44C6-818D-B7F84457C6CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27B5B633-C0BB-44C6-818D-B7F84457C6CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27B5B633-C0BB-44C6-818D-B7F84457C6CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

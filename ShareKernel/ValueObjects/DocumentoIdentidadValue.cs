@@ -11,26 +11,26 @@ namespace ShareKernel.ValueObjects
 {
     public record DocumentoIdentidadValue : ValueObject
     {
-        public string Numero { get; }
-        public TipoDocumentoEnum TipoDocumento { get; }
+        public int Numero { get; }
 
-        public DocumentoIdentidadValue(string numero,TipoDocumentoEnum tipoDocumento)
+        public DocumentoIdentidadValue(int numero)
         {
-            CheckRule(new StringNotNullOrEmptyRule(numero));
-            if (Numero.Length < 4)
+            var cantidadDigitos=Math.Floor(Math.Log10(numero) + 1);
+
+            if (cantidadDigitos > 0 && cantidadDigitos < 7)
             {
-                throw new BussinessRuleValidationException("El número introducido debe ser mayor a 3 digitos");
+                throw new BussinessRuleValidationException($"El número introducido debe estar en el rango de 1 y 7 dígitos");
             }
             Numero = numero;
-            TipoDocumento= tipoDocumento;
+         
         }
 
-        public static implicit operator string(DocumentoIdentidadValue value)
+        public static implicit operator int(DocumentoIdentidadValue value)
         {
             return value.Numero;
         }
 
-        public static implicit operator DocumentoIdentidadValue(string numero)
+        public static implicit operator DocumentoIdentidadValue(int numero)
         {
             return new DocumentoIdentidadValue(numero);
         }
